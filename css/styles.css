@@ -95,7 +95,7 @@ h3{
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -195,7 +195,7 @@ hr {
 
 /*About Us Page*/
 .usInfo{
-    width: 90%;
+    width: 70%;
     margin: 1rem auto;
 }
 
@@ -209,5 +209,43 @@ hr {
 
 /*Courses Page*/
 .content--courses{
-    
+    display: flex;
+    flex-direction: column;
+}
+
+.cursos img{
+    width: 100%;
+    height:auto;
+    align-self: top;
+}
+
+@media (min-width : 768px){
+    .cursos{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+    }
+    .cursos hr{
+        grid-column: 1/3;
+    }
+}
+.content--courses h2{
+    text-align: center;
+}
+
+.info h3{
+    font-family: var(--principalFont);
+    font-size: 2.3rem;
+}
+
+.info p{
+    font-family: var(--secundaryFont);
+    font-size: 1.8rem;
+}
+.bold{
+    font-weight: bold;
+    margin: 3rem 0;
+}
+.info span{
+    font-weight: lighter;
 }
