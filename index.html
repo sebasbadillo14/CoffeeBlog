@@ -4,16 +4,22 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="css/normalize.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel= "stylesheet" href="css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Mynerve&family=Shantell+Sans&display=swap" rel="stylesheet">
         <title>Coffee Blog</title>
+        <meta name="description" content="Web page blog coffee">
+        <!--Prefetch-->
+        <link rel="prefetch" href="us.html" as="document">
+        
+        <!--preload-->
+        <link rel="preload" href="css/normalize.css" as="style">
+        <link rel="stylesheet" href="css/normalize.css">
+
+        <link rel="preload" href="css/styles.css" as="style">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mynerve&family=Shantell+Sans&display=swap"  crossorigin="crossorigin" as="font">
+        <link href="https://fonts.googleapis.com/css2?family=Mynerve&family=Shantell+Sans&display=swap" rel="stylesheet">
+
+        
     </head>
     <body>
         <header class="header">
@@ -40,7 +46,11 @@
             <div class="column1">
                 <h2> Our Blog </h2>
                 <article  class="articles">
-                    <img src="img/blog1.jpg" alt="Coffee">
+                    <picture>
+                        <source srcset="img/blog1.webp" type="image/webp">
+                        <img  src="img/blog1.jpg" alt="Coffee"  loading="lazy">
+                    </picture>
+                    
                     <h3>Kinds of coffee</h3>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, 
                         reprehenderit consequatur perferendis officia, vitae fuga animi temporibus it
@@ -52,7 +62,7 @@
                     
                 </article>
                 <article class="articles">
-                    <img src="img/blog2.jpg" alt="Coffee">
+                    <img src="img/blog2.webp" alt="Coffee"  loading="lazy">
                     <h3>3 amazing recipies</h3>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, 
                         reprehenderit consequatur perferendis officia, vitae fuga animi temporibus it
@@ -63,7 +73,7 @@
                     <hr>
                 </article>
                 <article class="articles">
-                    <img src="img/blog3.jpg" alt="Coffee">
+                    <img  src="img/blog3.webp" alt="Coffee" loading="lazy">
                     <h3>Coffee benefits</h3>
                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, rerum, 
                         reprehenderit consequatur perferendis officia, vitae fuga animi temporibus it
@@ -80,14 +90,14 @@
                     <h3> Coffee extraction techniques</h3>
                     <p>Price: <span> Free</span></p>
                     <p>Capacity: <span>20</span></p>
-                    <a href="" class="button2">More Information About Us</a>
+                    <a href="us.html" class="button2">More Information About Us</a>
                     <hr>
                 </div>
                 <div class="courses">
                     <h3> 4 recipies for beginners</h3>
                     <p>Price: <span> Free</span></p>
                     <p>Capacity: <span>20</span></p>
-                    <a href=""  class="button2">More Information About Us</a>
+                    <a href="us.html"  class="button2">More Information About Us</a>
                 </div>
                 
             </aside>
@@ -106,6 +116,8 @@
                 </nav>
             </div>
         </footer>
+
+        <script src="js/modernizer.js"></script>
     </body>
     
 </html>

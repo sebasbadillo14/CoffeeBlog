@@ -28,6 +28,9 @@ h3{
 }
 
 /*Header*/
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
 .header__title{
     font-family: var(--principalFont);
     color: var(--white);
@@ -65,7 +68,7 @@ h3{
     background-repeat: no-repeat;
     background-size: cover;
     height: 60rem;
-    position: relative;
+    background-position: center center;
 }
 
 .header__nav{
